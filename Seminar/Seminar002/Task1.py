@@ -10,9 +10,6 @@ factorial = int(input('Введите число:\n'))
 i = 1
 sum = 1
 
-if factorial == 0:
-    factorial == 1
-
 while i <= factorial:
     sum *= i
     i += 1
