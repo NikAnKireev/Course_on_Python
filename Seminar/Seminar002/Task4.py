@@ -17,18 +17,15 @@ for _ in range(number):
     list_watermelon.append(random.randint(1, 10))
 print(list_watermelon)
 
-min_walue = max_walue = 1
+min_walue = max_walue = list_watermelon[0]
 
 for temp in list_watermelon:
+
     if temp > max_walue:
         max_walue = temp
-    temp += 1
 
-    min_walue = max_walue
-
-    for temp in list_watermelon:
-        if temp < min_walue:
-            min_walue = temp
-    temp += 1
+    if temp < min_walue:
+        min_walue = temp
+temp += 1
 
 print(f'Для себя арбуз - {max_walue}кг\nДля тещи арбуз - {min_walue}кг')
