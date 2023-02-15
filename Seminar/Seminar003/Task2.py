@@ -21,3 +21,6 @@ print(f"{lst} - было")
 for i in range(k):
     lst.insert(0, lst.pop())
 print(f"{lst} - стало")
+
+result = [i for i in lst if i > 0]
+print(result)
