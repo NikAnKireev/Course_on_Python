@@ -17,16 +17,15 @@
 
 from random import randint
 
-number = int(input('Введите число: '))
-array = [randint(1, 10) for _ in range(number)]
-
-
-def count(arr, ind = 0):
-    for i in range(len(arr)-1):
+def count(arr, ind=0):
+    for i in range(1, len(arr)-1):
         if arr[i-1] < arr[i] and arr[i] > arr[i+1]:
             ind += 1
     print(ind)
 
+number = int(input('Введите число: '))
 
-print(array)
-count(array)
+for i in range(4):
+    array = [randint(1, 10) for _ in range(number)]
+    print(array)
+    count(array)
