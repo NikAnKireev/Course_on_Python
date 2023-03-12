@@ -12,13 +12,13 @@ films = []
 def save():
     with open('films.json', 'w', encoding='utf-8') as data:
         data.write(json.dumps(films, ensure_ascii=False))
-    print('Наша фильмотека успешно сохранена в файле films.json!')
+    print('\nНаша фильмотека успешно сохранена в файле films.json!')
 
 
 def load():
     with open('films.json', 'r', encoding='utf-8') as data:
         films = json.load(data)
-    print('Фильмотека успешно загруженна!')
+    print('\nФильмотека успешно загруженна!')
 
 
 try:
@@ -61,10 +61,8 @@ while True:
               \n/load - Загрузить коллекцию фильмов.\n/random - Выбрать случайный фильм из коллекции фильмов.')
     elif command == '/save':
         save()
-        print('\nКоллекция фильмов успешно сохранена!')
     elif command == '/load':
         load()
-        print('\nКоллекция фильмов успешно загруженна!')
     elif command == '/random':
         rnd = randint(0, len(films) - 1)
         print(f'\nЖребий выпал на - ' + choice(films))
